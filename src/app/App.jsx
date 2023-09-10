@@ -1,8 +1,9 @@
 import AppRoutes from "../routes/Routes"
+import './App.scss'
 
 const App = () => {
   return (
-    <div>
+    <div >
       <AppRoutes />
     </div>
   )
