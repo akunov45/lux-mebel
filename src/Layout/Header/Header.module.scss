@@ -58,7 +58,25 @@ header {
 
 .searchInput320 {
 	display: none;
-	@media screen and (max-width: 375px) {
-		display: block;
+	.searchIcon {
+		position: absolute;
+		padding-left: 15px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.main__header {
+		column-gap: 10px !important;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.searchInput320 {
+		padding-top: 16px;
+		display: flex;
+		align-items: center;
+	}
+	.userActions {
+		column-gap: 20px !important;
 	}
 }
