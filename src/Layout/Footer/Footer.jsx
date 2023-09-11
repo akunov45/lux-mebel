@@ -37,7 +37,7 @@ const Footer = () => {
       </div>
       <div className='container'>
         <div className={cls.promotion}>
-          <a href="">Акция</a>
+          <a href="" className={cls.a}>Акция</a>
           <a href="">Новинки</a>
         </div>
         <div className={cls.footer__actions}>
