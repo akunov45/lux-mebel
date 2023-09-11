@@ -9,7 +9,7 @@ const BurgerMenu = () => {
 
   return (
     <div className={`burger-menu ${isActive ? 'active' : ''}`} onClick={classListToggle}>
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 200 200">
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 200 200">
         <g strokeWidth="6.5" strokeLinecap="round">
           <path
             d="M72 82.286h28.75"

@@ -27,7 +27,6 @@ footer {
 		}
 	}
 	.footerAddress {
-		max-width: 172px;
 		.lm {
 			text-align: right;
 			font-size: 42px;
@@ -35,6 +34,7 @@ footer {
 			margin-bottom: 20px;
 		}
 		p {
+			max-width: 172px;
 			text-align: right;
 			font-weight: 400;
 			line-height: 126.688%;
@@ -57,9 +57,8 @@ footer {
 	footer > div {
 		display: block;
 	}
-
 	.footerAddress {
-		max-width: 320px !important;
+		width: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
