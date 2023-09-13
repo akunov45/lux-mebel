@@ -6,6 +6,7 @@ $small-text-color: #686868;
 	.product {
 		display: flex;
 		column-gap: 30px;
+		margin-bottom: 50px;
 		img {
 			width: 100%;
 		}
@@ -38,6 +39,7 @@ $small-text-color: #686868;
 		}
 		&__actions {
 			display: flex;
+			flex-wrap: wrap;
 			align-items: center;
 			margin-bottom: 20px;
 			vertical-align: text-top;
@@ -87,16 +89,11 @@ $small-text-color: #686868;
 		&__count {
 			width: max-content;
 			margin-right: 45px;
-			input[type="number"] {
-				text-align: center;
-				width: 30px;
-				margin: 0;
-				outline: none;
-				&::-webkit-outer-spin-button,
-				&::-webkit-inner-spin-button {
-					-webkit-appearance: none;
-					margin: 0;
-				}
+			.ant-input-number-input-wrap {
+				width: 50px;
+			}
+			input {
+				padding: 5px 10px;
 			}
 		}
 		&__description {
@@ -120,9 +117,21 @@ $small-text-color: #686868;
 	.product {
 		flex-direction: column;
 		row-gap: 44px;
+		&__price {
+			margin-right: 14px !important;
+		}
+		&__actions {
+			gap: 25px;
+		}
 		&__info,
 		&__image {
 			max-width: 100vh !important;
+		}
+		&__favoriteBtn {
+			margin-left: 16px !important;
+			span {
+				display: none;
+			}
 		}
 	}
 }

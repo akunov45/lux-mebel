@@ -1,9 +1,15 @@
-import cls from './ProductInfoPage.module.scss'
-import { ReactComponent as StarIcon } from '../../assets/star.svg'
-import { ReactComponent as HeartIcon } from '../../assets/heart-icon.svg'
-import { Button } from '../../components/ui/Buttons/Button'
+import { DownOutlined } from '@ant-design/icons';
+import { ColorPicker, InputNumber } from 'antd';
+import { useState } from 'react';
+import { ReactComponent as HeartIcon } from '../../assets/heart-icon.svg';
+import { ReactComponent as StarIcon } from '../../assets/star.svg';
+import { Button } from '../../components/ui/Buttons/Button';
+import cls from './ProductInfoPage.module.scss';
+import Tabs from '../../components/Tabs/Tabs';
+
 
 const ProductInfoPage = () => {
+  const [open, setOpen] = useState(false);
   return (
     <div className={cls.productWrap}>
       <div className={cls.product}>
@@ -31,13 +37,23 @@ const ProductInfoPage = () => {
           <div className={cls.product__actions} style={{ alignItems: 'start' }}>
             <div className={cls.product__color}>
               <p>Цвет</p>
-              <input type="color" />
+              <ColorPicker
+                value={"#cc9f48"}
+                open={open}
+                onOpenChange={setOpen}
+                showText={() => (
+                  <DownOutlined
+                    rotate={open ? 180 : 0}
+                    style={{
+                      color: 'rgba(0, 0, 0, 0.25)',
+                    }}
+                  />
+                )}
+              />
             </div>
             <div className={cls.product__count}>
               <p>Количество</p>
-              <input type="number"
-                name="quantity"
-                value={1} />
+              <InputNumber min={1} max={10} defaultValue={3} bordered={false} />
             </div>
             <div className={cls.product__sizes}>
               <p>Размер (Д × Ш × В)</p>
@@ -50,6 +66,7 @@ const ProductInfoPage = () => {
           </div>
         </div>
       </div>
+      <Tabs />
     </div>
   )
 }

@@ -1,0 +1,32 @@
+.tabs {
+	display: flex;
+	gap: 100px;
+	justify-content: space-between;
+	> div {
+		width: 50%;
+	}
+}
+
+.flex {
+	max-width: 566px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 23px;
+	.dot {
+		flex-grow: 1;
+		border-bottom: 1px dotted #686868;
+		height: 16px;
+		margin: 0 0.4em;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.tabs {
+		flex-direction: column;
+		gap: 0px;
+		> div {
+			width: 100%;
+		}
+	}
+}
