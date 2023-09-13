@@ -1,0 +1,38 @@
+.hero-img{
+    // position: absolute;
+    // z-index: -2;
+}
+.hero {
+    position: relative;
+    background-image:url('../../assets/sofa.png');
+    height:450px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+.hero-title{
+    padding: 100px 0 0 120px;
+    h1{
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    &-desc{
+        font-size: 16px;
+        font-weight: 400;
+        margin: 15px 0 20px ;
+    }
+    .hero-btn {
+        padding: 14px 25px;
+        border-color: transparent;
+        background:white
+    }
+
+}
+.card-block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
