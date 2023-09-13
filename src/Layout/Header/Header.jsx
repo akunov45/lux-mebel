@@ -4,6 +4,8 @@ import Logo from '../../assets/logo.svg'
 import InputField from "../../components/ui/InputField/InputField"
 import HeaderDelivery from "../../components/HeaderDelivery/HeaderDelivery"
 import BurgerMenu from "../../components/BurgerMenu/BurgerMenu"
+import { ReactComponent as BasketIcon } from '../../assets/basket-icon.svg'
+import { ReactComponent as HeartIcon } from '../../assets/heart-icon.svg'
 
 
 const Header = () => {
@@ -28,14 +30,10 @@ const Header = () => {
           <div className={cls.userActions}>
             <HeaderDelivery hide="hide" fillColor="black" />
             <span>
-              <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.467 9.55034L10.9167 18L19.3663 9.55034C20.3056 8.61103 20.8333 7.33706 20.8333 6.00867C20.8333 3.24246 18.5909 1 15.8247 1C14.4963 1 13.2223 1.5277 12.283 2.46701L10.9167 3.83333L9.55034 2.46701C8.61103 1.5277 7.33706 1 6.00867 1C3.24246 1 1 3.24246 1 6.00867C1 7.33706 1.5277 8.61103 2.467 9.55034Z" stroke="black" strokeLinejoin="round" />
-              </svg>
+              <HeartIcon />
             </span>
             <span>
-              <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.70653 5.5V4.85714C4.70653 2.7269 6.43343 1 8.56367 1C10.6939 1 12.4208 2.7269 12.4208 4.85714V5.5M2.00802 8.5723L1.00802 17.5723C0.923392 18.3339 1.51957 19 2.28587 19H14.8415C15.6078 19 16.2039 18.3339 16.1193 17.5723L15.1193 8.5723C15.047 7.92117 14.4966 7.42857 13.8415 7.42857H3.28587C2.63073 7.42857 2.08036 7.92117 2.00802 8.5723Z" stroke="black" />
-              </svg>
+              <BasketIcon />
             </span>
             <span>
               <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
