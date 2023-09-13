@@ -1,0 +1,137 @@
+$text-color: #414141;
+$small-text-color: #686868;
+.productWrap {
+	font-family: Roboto;
+	padding-top: 64px;
+	.product {
+		display: flex;
+		column-gap: 30px;
+		margin-bottom: 50px;
+		img {
+			width: 100%;
+		}
+		&__image {
+			max-width: 653px;
+			padding: 60px 27px 45px;
+			width: 100%;
+			text-align: center;
+			border: 1px solid red;
+		}
+		&__info {
+			max-width: 456px;
+			width: 100%;
+			border: 1px solid red;
+		}
+		&__stars {
+			margin-bottom: 15px;
+		}
+		&__name {
+			color: $text-color;
+			font-size: 28px;
+			font-weight: 500;
+			margin-bottom: 10px;
+		}
+		&__category {
+			color: $small-text-color;
+			font-size: 14px;
+			font-weight: 400;
+			margin-bottom: 20px;
+		}
+		&__actions {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			margin-bottom: 20px;
+			vertical-align: text-top;
+			p {
+				color: $text-color;
+				font-size: 12px;
+				font-weight: 400;
+				margin-bottom: 10px;
+			}
+			input {
+				padding: 7px 10px;
+				outline: none;
+				border: 0;
+				background: #fff;
+				box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.07);
+			}
+		}
+		&__price {
+			color: $text-color;
+			font-size: 28px;
+			font-weight: 500;
+			margin-right: 30px;
+		}
+		&__favoriteBtn {
+			margin-left: 20px;
+			display: flex;
+			column-gap: 10px;
+			font-size: 12px;
+			font-weight: 400;
+		}
+		&__color {
+			margin-right: 25px;
+			width: max-content;
+			input[type="color"] {
+				appearance: none;
+				-moz-appearance: none;
+				-webkit-appearance: none;
+				background: none;
+				border: 0;
+				outline: none;
+				cursor: pointer;
+				padding: 0;
+				height: 34px;
+				width: 34px;
+			}
+		}
+		&__count {
+			width: max-content;
+			margin-right: 45px;
+			.ant-input-number-input-wrap {
+				width: 50px;
+			}
+			input {
+				padding: 5px 10px;
+			}
+		}
+		&__description {
+			h5 {
+				color: $text-color;
+				font-size: 12px;
+				font-weight: 400;
+				margin-bottom: 10px;
+			}
+			p {
+				color: $small-text-color;
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 18px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.product {
+		flex-direction: column;
+		row-gap: 44px;
+		&__price {
+			margin-right: 14px !important;
+		}
+		&__actions {
+			gap: 25px;
+		}
+		&__info,
+		&__image {
+			max-width: 100vh !important;
+		}
+		&__favoriteBtn {
+			margin-left: 16px !important;
+			span {
+				display: none;
+			}
+		}
+	}
+}
