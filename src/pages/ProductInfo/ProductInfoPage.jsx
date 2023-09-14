@@ -57,7 +57,7 @@ const ProductInfoPage = () => {
             </div>
             <div className={cls.product__sizes}>
               <p>Размер (Д × Ш × В)</p>
-              <input type="text" value={"218 СМ x 95 СМ x 90 СМ"} />
+              <input type="text" defaultValue={"218 СМ x 95 СМ x 90 СМ"} />
             </div>
           </div>
           <div className={cls.product__description}>

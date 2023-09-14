@@ -7,7 +7,6 @@ import BurgerMenu from "../../components/BurgerMenu/BurgerMenu"
 import { ReactComponent as BasketIcon } from '../../assets/basket-icon.svg'
 import { ReactComponent as HeartIcon } from '../../assets/heart-icon.svg'
 
-
 const Header = () => {
 
   return (

@@ -8,9 +8,9 @@ const MiniHeader = () => {
     <header>
       <div className={cls.header}>
         <nav>
-          <Link to="">Главная</Link>
-          <Link to="">О нас</Link>
-          <Link to="">Контакты</Link>
+          <Link to="/">Главная</Link>
+          <Link to="/about-us">О нас</Link>
+          <Link to="/contact">Контакты</Link>
         </nav>
         <div className={cls.header__actions}>
           <PhonIcon stroke="white" />
