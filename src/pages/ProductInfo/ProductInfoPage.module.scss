@@ -15,12 +15,10 @@ $small-text-color: #686868;
 			padding: 60px 27px 45px;
 			width: 100%;
 			text-align: center;
-			border: 1px solid red;
 		}
 		&__info {
 			max-width: 456px;
 			width: 100%;
-			border: 1px solid red;
 		}
 		&__stars {
 			margin-bottom: 15px;
@@ -89,11 +87,13 @@ $small-text-color: #686868;
 		&__count {
 			width: max-content;
 			margin-right: 45px;
-			.ant-input-number-input-wrap {
+			> div {
 				width: 50px;
 			}
 			input {
-				padding: 5px 10px;
+				text-align: center;
+				padding: 5px;
+				padding-right: 10px;
 			}
 		}
 		&__description {
