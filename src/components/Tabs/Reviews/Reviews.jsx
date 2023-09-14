@@ -2,7 +2,7 @@ import cls from './Reviews.module.scss'
 
 const Reviews = () => {
   return (
-    <div>Reviews</div>
+    <div>Отзывов пока нет</div>
   )
 }
 
