@@ -4,7 +4,7 @@ import { headerMenu, navItems } from '../../utils/constans'
 import cls from './SideBar.module.scss'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { burgerFixed } from '../../store/navbarSlice/navbarSlice'
+import { burgerFixed, showBurgerMenu } from '../../store/navbarSlice/navbarSlice'
 
 const MenuItem = ({ SVGIcon, label, to }) => {
   return (
@@ -34,14 +34,12 @@ const SideBar = () => {
 
   useEffect(() => {
     dispatch(burgerFixed("fixed"))
-    return () => {
-      dispatch(burgerFixed(""))
-      console.log('unmount');
-    }
+    return () => dispatch(burgerFixed(""))
   }, [dispatch])
 
   return (
-    <div className={cls.overlay}>
+    <div className={cls.overlay} id='overlay'
+      onClick={({ target }) => target.id === "overlay" && dispatch(showBurgerMenu(false))}>
       <div className={cls.sideBarWrap}>
         <h2 className={cls.sideBarTitle}>Меню</h2>
         <div className={cls.menu}>
@@ -56,7 +54,7 @@ const SideBar = () => {
           ))}
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 
