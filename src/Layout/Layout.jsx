@@ -1,8 +1,8 @@
+import { useSelector } from 'react-redux'
 import { Outlet } from 'react-router-dom'
 import NavCategory from '../components/NavCategory/NavCategory'
 import Footer from './Footer/Footer'
 import Header from './Header/Header'
-import { useSelector } from 'react-redux'
 
 const Layout = () => {
   const { isHiddenNav } = useSelector(state => state.navbar)

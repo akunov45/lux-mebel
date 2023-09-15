@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom"
 import Layout from "../Layout/Layout"
-import HomePage from "../pages/HomePage/HomePage"
-import ProductInfoPage from "../pages/ProductInfo/ProductInfoPage"
-import NotFoundPage from "../pages/NotFoundPage/NotFoundPage"
 import AboutPage from "../pages/AboutPage/AboutPage"
+import HomePage from "../pages/HomePage/HomePage"
+import NotFoundPage from "../pages/NotFoundPage/NotFoundPage"
+import ProductInfoPage from "../pages/ProductInfo/ProductInfoPage"
 
 const AppRoutes = () => {
   return (

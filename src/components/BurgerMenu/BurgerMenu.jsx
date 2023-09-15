@@ -1,14 +1,15 @@
-import { useState } from 'react';
-import './BurgerMenu.scss'
-const BurgerMenu = () => {
-  const [isActive, setIsActive] = useState(false)
+import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import { showBurgerMenu } from '../../store/navbarSlice/navbarSlice';
+import './BurgerMenu.scss';
 
-  const classListToggle = () => {
-    setIsActive(!isActive)
-  }
+const BurgerMenu = () => {
+  const dispatch = useDispatch()
+  const { isActive, fixed } = useSelector(state => state.navbar)
 
   return (
-    <div className={`burger-menu ${isActive ? 'active' : ''}`} onClick={classListToggle}>
+    <div className={`burger-menu ${fixed} ${isActive ? 'active' : ''}`}
+      onClick={() => dispatch(showBurgerMenu(!isActive))}>
       <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 200 200">
         <g strokeWidth="6.5" strokeLinecap="round">
           <path
@@ -52,3 +53,9 @@ const BurgerMenu = () => {
 }
 
 export default BurgerMenu
+
+
+BurgerMenu.propTypes = {
+  isActive: PropTypes.bool,
+  classListToggle: PropTypes.func
+}

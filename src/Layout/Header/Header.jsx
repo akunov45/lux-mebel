@@ -1,11 +1,12 @@
-import MiniHeader from "./MiniHeader"
-import cls from './Header.module.scss'
-import Logo from '../../assets/logo.svg'
-import InputField from "../../components/ui/InputField/InputField"
-import HeaderDelivery from "../../components/HeaderDelivery/HeaderDelivery"
-import BurgerMenu from "../../components/BurgerMenu/BurgerMenu"
+import { Link } from "react-router-dom"
 import { ReactComponent as BasketIcon } from '../../assets/basket-icon.svg'
 import { ReactComponent as HeartIcon } from '../../assets/heart-icon.svg'
+import Logo from '../../assets/logo.svg'
+import BurgerMenu from "../../components/BurgerMenu/BurgerMenu"
+import HeaderDelivery from "../../components/HeaderDelivery/HeaderDelivery"
+import InputField from "../../components/ui/InputField/InputField"
+import cls from './Header.module.scss'
+import MiniHeader from "./MiniHeader"
 
 const Header = () => {
 
@@ -16,7 +17,9 @@ const Header = () => {
         <div className={cls.main__header}>
           <BurgerMenu />
           <div>
-            <img src={Logo} alt="app logo" />
+            <Link to={"/"}>
+              <img src={Logo} alt="app logo" />
+            </Link>
           </div>
           <div className={cls.searchInput}>
             <span className={cls.searchIcon}>

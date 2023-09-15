@@ -1,11 +1,12 @@
+import PropTypes from 'prop-types'
 import { useEffect } from 'react'
-import cls from './AboutPage.module.scss'
 import { useDispatch } from 'react-redux'
-import { setIsHiddenNav } from '../../store/navbarSlice/navbarSlice'
-import { ReactComponent as NicePriceIcon } from '../../assets/nice-price-icon.svg'
 import { ReactComponent as CarDeliveryIcon } from '../../assets/car-delivery-icon.svg'
-import { ReactComponent as SaveTimeIcon } from '../../assets/save-time-icon.svg'
 import { ReactComponent as ManufacturingIcon } from '../../assets/manufacturing-icon.svg'
+import { ReactComponent as NicePriceIcon } from '../../assets/nice-price-icon.svg'
+import { ReactComponent as SaveTimeIcon } from '../../assets/save-time-icon.svg'
+import { setIsHiddenNav } from '../../store/navbarSlice/navbarSlice'
+import cls from './AboutPage.module.scss'
 
 const BuyItem = ({ SVGIcon, title, text }) => {
   return (
@@ -19,6 +20,11 @@ const BuyItem = ({ SVGIcon, title, text }) => {
       </div>
     </div>
   )
+}
+BuyItem.propTypes = {
+  SVGIcon: PropTypes.func,
+  title: PropTypes.string,
+  text: PropTypes.string
 }
 
 const imgUrl = "https://novacancy-atl.com/wp-content/uploads/2021/03/NoVacancyHomeStaging_RentingDecorforaHome.png"
