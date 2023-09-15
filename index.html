@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -8,6 +8,17 @@
 	</head>
 	<body>
 		<div id="root"></div>
+		<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
 		<script type="module" src="/src/main.jsx"></script>
+		<script type="text/javascript">
+			var map;
+
+			DG.then(function () {
+				map = DG.map("map", {
+					center: [54.98, 82.89],
+					zoom: 13,
+				});
+			});
+		</script>
 	</body>
 </html>

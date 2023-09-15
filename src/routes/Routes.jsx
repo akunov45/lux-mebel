@@ -4,6 +4,7 @@ import AboutPage from "../pages/AboutPage/AboutPage"
 import HomePage from "../pages/HomePage/HomePage"
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage"
 import ProductInfoPage from "../pages/ProductInfo/ProductInfoPage"
+import ContactPage from "../pages/ContactPage/ContactPage"
 
 const AppRoutes = () => {
   return (
@@ -12,6 +13,7 @@ const AppRoutes = () => {
         <Route index element={<HomePage />} />
         <Route path="product/:id" element={<ProductInfoPage />} />
         <Route path="about-us" element={<AboutPage />} />
+        <Route path="contact" element={<ContactPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
