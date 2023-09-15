@@ -48,13 +48,13 @@ const SideBar = () => {
           ))}
         </div>
         <h2 className={cls.sideBarTitle}>Категории</h2>
-        <div >
+        <div className={cls.catalog}>
           {navItems.map(({ SvgIcon, categoryName, linkTo = "" }, index) => (
             <MenuItem SVGIcon={SvgIcon} label={categoryName} to={linkTo} key={index} />
           ))}
         </div>
       </div>
-    </div >
+    </div>
   )
 }
 
