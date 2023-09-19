@@ -1,8 +1,21 @@
+.groupName {
+	font-size: 14px;
+	font-weight: 400;
+	padding: 15px;
+	@media screen and (max-width: 425px) {
+		padding: 5px;
+	}
+}
 .category {
 	display: flex;
 	column-gap: 10px;
+	padding: 24px 40px;
 	align-items: center;
-	p {
+	&:hover {
+		background-color: #245462;
+		color: #fff;
+	}
+	&__name {
 		width: max-content;
 	}
 }

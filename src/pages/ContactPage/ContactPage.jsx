@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { ReactComponent as EmailIcon } from '../../assets/email-icon.svg'
 import { ReactComponent as InstagramIcon } from '../../assets/instagram-icon.svg'
 import { ReactComponent as PhonIcon } from '../../assets/phone-icon.svg'
@@ -8,6 +9,16 @@ import TextArea from '../../components/ui/TextArea/TextArea'
 import cls from './ContactPage.module.scss'
 
 const ContactPage = () => {
+  useEffect(() => {
+    let map;
+
+    DG.then(function () {
+      map = DG.map("map", {
+        center: [54.98, 82.89],
+        zoom: 13,
+      });
+    });
+  }, [])
   return (
     <>
       <div className={cls.contact}>
