@@ -1,0 +1,129 @@
+.aboutWrap {
+	display: flex;
+	padding-top: 45px;
+	padding-bottom: 72px;
+	gap: 48px;
+	justify-content: center;
+	.theStore {
+		padding-top: 119px;
+		max-width: 421px;
+		h5 {
+			color: #245462;
+			font-size: 12px;
+			letter-spacing: 0.96px;
+		}
+		h2 {
+			color: #414141;
+			font-size: 24px;
+		}
+		h5,
+		h2 {
+			font-weight: 400;
+			margin-bottom: 16px;
+		}
+		p {
+			margin-bottom: 25px;
+			font-size: 14px;
+			color: #686868;
+			font-weight: 400;
+			line-height: 140.188%;
+		}
+	}
+	.theStoreImg {
+		padding-top: 90px;
+		flex-grow: 1;
+		max-width: 50%;
+		min-width: 216px;
+		img {
+			width: 100%;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 155px;
+			z-index: -2;
+			right: 0;
+			width: 40%;
+			max-height: 500px;
+			height: 100%;
+			background-color: #d7e8ed;
+		}
+	}
+}
+.buyProfit {
+	padding-top: 100px;
+	padding-bottom: 95px;
+	h3 {
+		text-align: center;
+		color: #414141;
+		font-size: 24px;
+		font-weight: 400;
+		letter-spacing: 0.36px;
+		margin-bottom: 90px;
+	}
+	.buyFlexOne {
+		display: flex;
+		column-gap: 64px;
+	}
+	.buyFlex {
+		display: flex;
+		column-gap: 30px;
+		margin-bottom: 80px;
+		&__item {
+			max-width: 440px;
+			h5 {
+				margin-bottom: 10px;
+				color: #414141;
+				font-size: 18px;
+				font-weight: 400;
+				letter-spacing: 0.27px;
+			}
+			p {
+				color: #686868;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 140.188%; /* 19.626px */
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.aboutWrap {
+		flex-direction: column;
+		padding-top: 0;
+		padding-bottom: 0;
+		gap: 25px;
+		.theStore {
+			padding-top: 0;
+			h5 {
+				text-align: center;
+			}
+		}
+		.theStoreImg {
+			padding-top: 25px;
+			order: -1;
+			&::after {
+				max-height: 152px;
+			}
+		}
+	}
+	.buyProfit {
+		padding-top: 30px;
+		padding-bottom: 40px;
+		h3 {
+			margin-bottom: 35px;
+		}
+	}
+
+	.buyFlexOne {
+		flex-direction: column;
+	}
+	.buyFlex {
+		column-gap: 15px;
+		margin-bottom: 25px !important;
+		svg {
+			transform: scale(0.6);
+		}
+	}
+}

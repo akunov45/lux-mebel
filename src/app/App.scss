@@ -7,8 +7,13 @@
 	box-sizing: border-box;
 }
 
+ul,
+ol {
+	list-style: none;
+}
+
 body {
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto", sans-serif !important;
 	font-size: 14px;
 }
 
@@ -27,7 +32,7 @@ a {
 	@media screen and (max-width: 768px) {
 		max-width: 720px;
 	}
-	@media screen and (max-width: 375px) {
+	@media screen and (max-width: 425px) {
 		padding: 0 15px;
 	}
 }

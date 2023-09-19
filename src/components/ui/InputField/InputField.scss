@@ -1,7 +1,6 @@
 .text-field {
 	max-width: 840px;
 	width: 100%;
-	min-width: 290px;
 	padding: 17px 15px 17px 50px;
 	font-weight: 400;
 	outline: none;
@@ -12,7 +11,7 @@
 		color: #414141;
 	}
 
-	@media screen and (max-width: 768px) {
-		max-width: 240px;
+	@media screen and (max-width: 425px) {
+		min-width: 290px;
 	}
 }
