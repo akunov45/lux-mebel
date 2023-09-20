@@ -19,6 +19,7 @@ const ContactPage = () => {
       });
     });
   }, [])
+
   return (
     <>
       <div className={cls.contact}>
