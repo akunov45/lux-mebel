@@ -5,6 +5,8 @@ import HomePage from "../pages/HomePage/HomePage"
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage"
 import ProductInfoPage from "../pages/ProductInfo/ProductInfoPage"
 import ContactPage from "../pages/ContactPage/ContactPage"
+import CartPage from "../pages/CartPage/CartPage"
+import FavPage from "../pages/FavPage/FavPage"
 
 const AppRoutes = () => {
   return (
@@ -15,6 +17,8 @@ const AppRoutes = () => {
         <Route path="about-us" element={<AboutPage />} />
         <Route path="contact" element={<ContactPage />} />
         <Route path="*" element={<NotFoundPage />} />
+        <Route path='/cart' element={<CartPage/>}/>
+        <Route path='/favourite' element={<FavPage/>}/>
       </Route>
     </Routes>
   )

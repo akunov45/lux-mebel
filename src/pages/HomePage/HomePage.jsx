@@ -10,7 +10,8 @@ const HomePage = () => {
 
   useEffect(() => {
     dispatch(getProducts())
-  }, [])
+  },[])
+
 
   if (isLoaded == true) {
     return <h2>Loading....</h2>
