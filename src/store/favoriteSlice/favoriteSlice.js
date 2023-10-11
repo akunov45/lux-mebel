@@ -20,7 +20,7 @@ const favoriteSlice=createSlice({
             localStorage.setItem('favoriteCart', JSON.stringify(state.favoriteData ))
         },
         getFromLSFav(state){
-            const items=JSON.parse(localStorage.getItem('favoriteCart'))
+            const items=JSON.parse(localStorage.getItem('favoriteCart')) || []
             state.favoriteData=items
         }
     }, 

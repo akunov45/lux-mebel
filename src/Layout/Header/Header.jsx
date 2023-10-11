@@ -14,7 +14,7 @@ import { getFromLSFav } from "../../store/favoriteSlice/favoriteSlice"
 
 const Header = () => {
   const dispatch=useDispatch()
-  const {cartData}=useSelector(state=>state.cart)
+  const {cartData }=useSelector(state=>state.cart )
   const {favoriteData}=useSelector(state=>state.favorite)
   const total=cartData.length>0 ? cartData.length : ''
   console.log(cartData);

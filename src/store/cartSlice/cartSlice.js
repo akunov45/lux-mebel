@@ -21,7 +21,7 @@ const cartSlice=createSlice({
         },
        getFromLSCart(state){
         // const items=localStorage.getItem(JSON.parse('cartStorage'))
-        const items=JSON.parse(localStorage.getItem('cartStorage'))
+        const items=JSON.parse(localStorage.getItem('cartStorage')) || []
         state.cartData=items
 
        }, 
