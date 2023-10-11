@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { ReactComponent as BasketIcon } from '../../assets/basket-icon.svg'
 import { ReactComponent as HeartIcon } from '../../assets/heart-icon.svg'
 import Logo from '../../assets/logo.svg'
@@ -7,8 +7,25 @@ import HeaderDelivery from "../../components/HeaderDelivery/HeaderDelivery"
 import InputField from "../../components/ui/InputField/InputField"
 import cls from './Header.module.scss'
 import MiniHeader from "./MiniHeader"
+import { useSelector, useDispatch } from "react-redux"
+import { useEffect } from "react"
+import { getFromLSCart } from "../../store/cartSlice/cartSlice"
+import { getFromLSFav } from "../../store/favoriteSlice/favoriteSlice"
 
 const Header = () => {
+  const dispatch=useDispatch()
+  const {cartData}=useSelector(state=>state.cart)
+  const {favoriteData}=useSelector(state=>state.favorite)
+  const total=cartData.length>0 ? cartData.length : ''
+  console.log(cartData);
+  const totalFav=favoriteData.length>0 ? favoriteData.length: ''
+  const navigate=useNavigate()
+  useEffect(()=>{
+    dispatch(getFromLSCart())
+  },[])
+  useEffect(()=>{
+    dispatch(getFromLSFav())
+  },[])
 
   return (
     <>
@@ -31,11 +48,13 @@ const Header = () => {
           </div>
           <div className={cls.userActions}>
             <HeaderDelivery hide="hide" fillColor="black" />
-            <span>
+            <span onClick={()=>navigate('/favourite')}>
               <HeartIcon />
+              <span>{totalFav}</span>
             </span>
-            <span>
+            <span onClick={()=>navigate('/cart')}>
               <BasketIcon />
+              <span>{total}</span>
             </span>
             <span>
               <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">

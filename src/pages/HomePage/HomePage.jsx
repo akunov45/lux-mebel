@@ -3,6 +3,7 @@ import Card from '../../components/Card/Card'
 import './HomePage.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProducts } from '../../store/productSlice/productSlice'
+
 const HomePage = () => {
   const dispatch=useDispatch()
   const {productsData, isLoaded, error}=useSelector(state=>state.products)
@@ -10,6 +11,7 @@ const HomePage = () => {
   useEffect(()=>{
     dispatch(getProducts())
   },[])
+
   if (isLoaded==true){
     return <h2>Loading....</h2>
   }

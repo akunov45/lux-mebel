@@ -1,20 +1,35 @@
 import { DownOutlined } from '@ant-design/icons';
 import { ColorPicker, InputNumber } from 'antd';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ReactComponent as HeartIcon } from '../../assets/heart-icon.svg';
 import { ReactComponent as StarIcon } from '../../assets/star.svg';
 import { Button } from '../../components/ui/Buttons/Button';
 import cls from './ProductInfoPage.module.scss';
 import Tabs from '../../components/Tabs/Tabs';
+import { useDispatch, useSelector } from 'react-redux';
+import { getSingleProduct } from '../../store/singleProductSlice/singleProductSlice';
+import { useParams } from 'react-router-dom';
+import { addItemToCart } from '../../store/cartSlice/cartSlice';
+import { addItemToFav } from '../../store/favoriteSlice/favoriteSlice';
 
 
 const ProductInfoPage = () => {
   const [open, setOpen] = useState(false);
+  const {singleProductData}=useSelector(state=>state.singleProduct)
+  const dispatch=useDispatch()
+  const params=useParams()
+
+  useEffect(()=>{
+    dispatch(getSingleProduct(params.id))
+  }, [params.id])
+
+  console.log(singleProductData);
+
   return (
     <div className={cls.productWrap}>
       <div className={cls.product}>
         <div className={cls.product__image}>
-          <img src="https://avatars.mds.yandex.net/get-images-cbir/3927539/QjfaojOnQg6ifr-sFOcqWA8271/ocr" alt="" />
+          <img src={singleProductData.image} alt="" />
         </div>
         <div className={cls.product__info}>
           <div className={cls.product__stars}>
@@ -24,14 +39,14 @@ const ProductInfoPage = () => {
             <StarIcon fill="black" />
             <StarIcon fill="#D1D1D1" />
           </div>
-          <h3 className={cls.product__name}>Динс Velvet Yellow</h3>
-          <h6 className={cls.product__category}>Диваны</h6>
+          <h3 className={cls.product__name}>{singleProductData.name}</h3>
+          <h6 className={cls.product__category}>{singleProductData.category}</h6>
           <div className={cls.product__actions}>
-            <h3 className={cls.product__price}>4 690₽</h3>
-            <Button>Купить</Button>
-            <div className={cls.product__favoriteBtn}>
+            <h3 className={cls.product__price}>{singleProductData.price} $</h3>
+            <Button onClick={()=>dispatch(addItemToCart(singleProductData))}>Купить</Button>
+            <div className={cls.product__favoriteBtn} onClick={()=>dispatch(addItemToFav(singleProductData))}>
               <HeartIcon />
-              <span>Добавить в желаемое</span>
+              <span >Добавить в желаемое</span>
             </div>
           </div>
           <div className={cls.product__actions} style={{ alignItems: 'start' }}>
