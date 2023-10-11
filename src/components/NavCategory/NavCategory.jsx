@@ -4,6 +4,7 @@ import cls from './NavCategory.module.scss'
 import { navItems } from '../../utils/constans'
 
 
+
 const NavCategory = () => {
   return (
     <div className={cls.navWrap} id={cls["scrollbar-custom"]}>

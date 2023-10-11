@@ -1,38 +1,93 @@
-.hero-img{
-    // position: absolute;
-    // z-index: -2;
+.bestsellers {
+	padding-left: 15px;
+	color: #414141;
+	font-family: Roboto;
+	margin: 20px 0;
+	font-weight: 500;
 }
+
 .hero {
-    position: relative;
-    background-image:url('../../assets/sofa.png');
-    height:450px;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-
+	margin-top: 20px;
+	position: relative;
+	background-image: url("../../assets/sofa.png");
+	height: 450px;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	.small-desc {
+		display: none;
+	}
 }
-.hero-title{
-    padding: 100px 0 0 120px;
-    h1{
-        font-size: 50px;
-        text-transform: uppercase;
-        font-weight: 700;
-    }
-    &-desc{
-        font-size: 16px;
-        font-weight: 400;
-        margin: 15px 0 20px ;
-    }
-    .hero-btn {
-        padding: 14px 25px;
-        border-color: transparent;
-        background:white
-    }
-
+.hero-title {
+	padding: 100px 0 0 120px;
+	h1 {
+		font-size: 50px;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+	&-desc {
+		font-size: 16px;
+		font-weight: 400;
+		margin: 15px 0 20px;
+	}
+	.hero-btn {
+		padding: 14px 25px;
+		border-color: transparent;
+		background: white;
+	}
 }
 .card-block {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+	.hero {
+		height: 253px;
+	}
+	.hero-title {
+		padding: 71px 0 0 43px;
+		max-width: 320px;
+		h1 {
+			display: none;
+		}
+		&-desc {
+			font-size: 24px;
+			font-weight: 700;
+		}
+		.hero-btn {
+			padding: 14px;
+		}
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.bestsellers {
+		padding-left: 0;
+	}
+	.hero {
+		height: 200px;
+		.small-desc {
+			display: block;
+		}
+	}
+	.hero-title {
+		padding: 37px 0 0 15px !important;
+		max-width: 200px;
+		&-desc {
+			font-size: 16px;
+			font-weight: 500;
+		}
+		.hero-btn {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.card-block {
+		justify-content: center;
+	}
 }
