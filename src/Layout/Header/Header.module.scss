@@ -43,7 +43,7 @@ header {
 			position: absolute;
 			padding-left: 15px;
 		}
-		@media screen and (max-width: 425px) {
+		@media screen and (max-width: 768px) {
 			display: none;
 		}
 	}
@@ -68,9 +68,6 @@ header {
 	.main__header {
 		column-gap: 10px !important;
 	}
-}
-
-@media screen and (max-width: 425px) {
 	.searchInput320 {
 		padding-top: 16px;
 		display: flex;

@@ -9,7 +9,7 @@ const CartPage = () => {
   useEffect(()=>{
    dispatch( getFromLSCart())
   },[])
-  console.log(cartData);
+
   return (
     <div >
        <div className='card-main'>

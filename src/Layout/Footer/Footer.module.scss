@@ -53,9 +53,10 @@ footer {
 	}
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
 	footer > div {
 		display: block;
+		padding: 0;
 	}
 	.footerAddress {
 		width: 100%;
